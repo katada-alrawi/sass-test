@@ -1,0 +1,4 @@
+.panner {
+    @include flex-setup(flex-end);
+    border: 2px solid red;
+}

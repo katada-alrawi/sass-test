@@ -1,0 +1,26 @@
+// map
+$orange-colors: (
+  "my-orange": orange,
+  "dark-orange": rgba(198, 139, 37, 0.4),
+  "light-orange": rgba(244, 199, 122, 0.862),
+);
+$my-webpage-colors: (
+  "red": red,
+  "blue": blue,
+  "yellow": yellow,
+  "olive": rgb(20, 106, 20),
+);
+$my-font-size: (
+  "xs": 12px,
+  "m": 14px,
+  "l": 16px,
+  "xl": 18px,
+);
+
+@mixin my-font-size($value: "xs") {
+  @if (map-has-key($my-font-size, $value)) {
+    font-size: map-get($my-font-size, $value);
+  } @else {
+    @error "Hej, I don't know #{$value} , you can only use xs,m,l,xl";
+  }
+}

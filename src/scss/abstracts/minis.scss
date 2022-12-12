@@ -1,0 +1,11 @@
+@mixin flex-setup($content: "center", $items: "center") {
+    display: flex;
+    justify-content: $content;
+    align-items: $items;
+  }
+  @mixin box-size($width, $height) {
+    width: $width;
+    height: $height;
+  }
+  // @include flex-setup(flex-end, center);
+  
